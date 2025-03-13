@@ -1,8 +1,7 @@
 package com.icodeap.ecommerce.infrastructure.mapper;
 
 import com.icodeap.ecommerce.domain.Stock;
-import com.icodeap.ecommerce.infrastructure.entity.ProductEntity;
-import com.icodeap.ecommerce.infrastructure.entity.StockEntinty;
+import com.icodeap.ecommerce.infrastructure.entity.StockEntity;
 import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
@@ -14,7 +13,7 @@ import java.util.List;
 public interface StockMapper {
     @Mappings({
             @Mapping(source = "id", target = "id"),
-            @Mapping(source = "dateCreated", target = "dateRegister"),
+            @Mapping(source = "dateCreated", target = "dateCreated"),
             @Mapping(source = "unitIn", target = "unitIn"),
             @Mapping(source = "unitOut", target = "unitOut"),
             @Mapping(source = "description", target = "description"),
@@ -23,8 +22,8 @@ public interface StockMapper {
     }
 
     )
-    Stock toStock(StockEntinty stockEntinty);
-    List<Stock> toStocks (List<ProductEntity> productEntities);
+    Stock toStock(StockEntity stockEntity);
+    List<Stock> toStocks (List<StockEntity> stockEntities);
     @InheritInverseConfiguration
-    StockEntinty toStockEntinty(Stock stock);
+    StockEntity toStockEntity(Stock stock);
 }

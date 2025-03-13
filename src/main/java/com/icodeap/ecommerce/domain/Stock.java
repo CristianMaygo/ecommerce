@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 
 public class Stock {
     private Integer id;
-    private LocalDateTime dateRegister;
+    private LocalDateTime dateCreated;
     private Integer unitIn;
     private Integer unitOut;
     private String description;

@@ -1,6 +1,5 @@
 package com.icodeap.ecommerce.infrastructure.entity;
 
-import com.icodeap.ecommerce.domain.Product;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -14,7 +13,7 @@ import java.time.LocalDateTime;
 @Table(name = "stock")
 @NoArgsConstructor
 @Data
-public class StockEntinty {
+public class StockEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
